@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell me about you</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- 
+Tell me about you (Titulo)
+La idea es una pagina, es que al poner datos como pais de origen, que se muestren datos interesantes sobre ese pais,
+o tu fecha de nacimiento, acontecimietos de esa fecha en especifico y ademas sobre ese año,
+o cosas sobre tu signo zodiacal entre otras cosas 
+-->
+    <header>
+            <nav>    
+                <h1>
+                    <a href="index.html">Tell me about you</a>
+                </h1>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pestañas/sobre_nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="pestañas/contacto.html">Contactanos</a></li>
+                </ul>
+            </nav>        
+    </header>
+
+    <main>
+        <form class="información" action="">
+            <div>
+                <label class="label" for="pais">Selecciona tu país de origen</label>
+                <div class="banderas">
+                    <img class="img" src="img/argentina.png" alt="Argentina" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/brasil.png" alt="Brasil" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/peru.png" alt="Peru" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/ecuador.jpg" alt="Ecuador" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/bolivia.png" alt="Bolivia" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/chile.png" alt="Chile" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/paraguay.png" alt="Paraguay" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/uruguay.png" alt="Uruguay" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/colombia.png" alt="Colombia" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/venezuela.jpg" alt="Venezuela" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/guyana.png" alt="Guyana" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/surinam.png" alt="Surinam" onclick="seleccionarPais(this)">
+                    <img class="img" src="img/trinidad.png" alt="Trinidad y Tobago" onclick="seleccionarPais(this)">
+                    <input type="hidden" id="pais" name="pais">
+                </div>
+            </div>
+
+            <div>
+                <label class="label" for="mes_nacimiento">Selecciona tu mes de nacimiento</label>
+                <select id="mes_nacimiento" name="mes_nacimiento">
+                    <option value="Enero">Enero</option>
+                    <option value="Febrero">Febrero</option>
+                    <option value="Marzo">Marzo</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Mayo">Mayo</option>
+                    <option value="Junio">Junio</option>
+                    <option value="Julio">Julio</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Septiembre">Septiembre</option>
+                    <option value="Octubre">Octubre</option>
+                    <option value="Noviembre">Noviembre</option>
+                    <option value="Diciembre">Diciembre</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="label" for="signo_zodiacal">Selecciona tu signo zodiacal</label>
+                <select  id="signo_zodiacal" name="signo_zodiacal">
+                    <option value="Aries">Aries</option>
+                    <option value="Tauro">Tauro</option>
+                    <option value="Geminis">Géminis</option>
+                    <option value="Cancer">Cáncer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Escorpio">Escorpio</option>
+                    <option value="Sagitario">Sagitario</option>
+                    <option value="Capricornio">Capricornio</option>
+                    <option value="Acuario">Acuario</option>
+                    <option value="Piscis">Piscis</option>
+                </select>
+            </div>
+
+                <input class="buton" type="button" value="Enviar" onclick="mostrarPais(); mostrarMes(); mostrarSigno();">
+            </div>
+        </form>
+
+        
+        <div class="resultados">
+            <ul id="paises-lista"></ul>
+            <ul id="meses-lista"></ul>
+            <ul id="signos-lista"></ul>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="js/js.js"></script>
+    <script src="js/meses.js"></script>
+    <script src="js/paises.js"></script>
+    <script src="js/signos.js"></script>
+    
+
+
+</body>
+
+</html>
